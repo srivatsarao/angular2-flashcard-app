@@ -1,0 +1,26 @@
+<div class="flip-container vertical" [class.hide]="getCurrActive(i)" *ngFor="let card of flashCard; let i=index">
+  <div class="flipper ">
+    <div class="front panel panel-default">
+      <!-- front card -->
+      <div class="panel-heading">
+        <h1>{{cardData.strQn}}</h1>
+      </div>
+      <div class="panel-body">
+        <h3>{{card.qn}}</h3>
+      </div>
+    </div>
+    <div class="back panel panel-default">
+      <!-- back card -->
+      <div class="panel-heading">
+        <h1>{{cardData.strAns}}</h1>
+      </div>
+      <div class="panel-body">
+        <h2>{{card.ans}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12">
+     <button class="btn btn-default" type="button" role="button" (click)="showPanel('prev')">Prev</button>
+    <button class="btn btn-primary" type="button" role="button" (click)="showPanel('next')">Next</button>
+</div>
